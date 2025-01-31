@@ -1,5 +1,5 @@
 // Last edited by Dietrich Geisler 2025
-
+//vertex shader
 const VSHADER_SOURCE = `
     attribute vec3 a_Position;
     uniform mat4 u_Model;
@@ -11,7 +11,7 @@ const VSHADER_SOURCE = `
         v_Color = a_Color;
     }
 `
-
+//fragment shader
 const FSHADER_SOURCE = `
     varying mediump vec3 v_Color;
     void main() {
@@ -51,6 +51,8 @@ function main() {
         console.log('Failed to get the rendering context for WebGL')
         return
     }
+    
+    
 
     // We will call this at the end of most main functions from now on
     loadOBJFiles()
